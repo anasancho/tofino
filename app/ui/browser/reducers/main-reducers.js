@@ -86,6 +86,9 @@ export default function basic(state = initialState, action) {
       return state.setIn(['profile', 'completions'], Immutable.Map(action.payload));
     }
 
+    case types.SET_FILTER:
+      return state.set('filter', action.filter);
+    
     default:
       return state;
   }

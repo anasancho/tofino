@@ -32,6 +32,8 @@ export const State = Immutable.Record({
   // The currently displayed tab
   currentPageIndex: -1,
 
+  filter: null,
+
   // Should page section be visible in UI
   pageAreaVisible: false,
 

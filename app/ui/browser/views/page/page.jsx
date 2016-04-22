@@ -112,7 +112,7 @@ class Page extends Component {
            * which doesn't have access to <style> sheets in this document. */ }
         <webview-wrapper ref="webviewWrapper"
           preload={'../../content/preload/content.js'}
-          class={`webview-${this.props.page.id}`}
+          class={`webview-${this.props.page.id} ${this.props.filter || ''}`}
           webviewinnerstyle={JSON.stringify(WEB_VIEW_INNER_STYLE)}
           webviewwrapperstyle={JSON.stringify(Object.assign({}, WEB_VIEW_WRAPPER_STYLE,
             this.props.page.chromeMode === 'expanded'

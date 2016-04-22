@@ -31,7 +31,8 @@ const App = function({ state, dispatch }) {
         pages={state.browserWindow.pages}
         currentPageIndex={state.browserWindow.currentPageIndex}
         currentPage={state.browserWindow.pages.get(state.browserWindow.currentPageIndex)}
-        pageAreaVisible={state.browserWindow.pageAreaVisible} />
+        pageAreaVisible={state.browserWindow.pageAreaVisible}
+        filter={state.browserWindow.filter} />
       <Style.Element />
     </div>
   );

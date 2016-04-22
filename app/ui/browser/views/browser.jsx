@@ -110,6 +110,7 @@ class BrowserWindow extends Component {
       <div className={BROWSER_WINDOW_STYLE}>
         <div className={CHROME_AREA_STYLE}>
           <NavBar page={currentPage}
+            handleFilterChange={e => dispatch(actions.setFilter(e.target.value))}
             {...{
               navBack,
               navForward,
@@ -140,6 +141,7 @@ class BrowserWindow extends Component {
         <div className={CONTENT_AREA_STYLE}>
           {pages.map((page, pageIndex) => (
             <Page key={`page-${pageIndex}`}
+              filter={this.props.filter}
               isActive={pageIndex === currentPageIndex}
               page={page}
               {...this.props} />

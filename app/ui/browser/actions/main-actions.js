@@ -92,3 +92,7 @@ export function navigatePageForward(pageId) {
 export function navigatePageRefresh(pageId) {
   return { type: types.NAVIGATE_PAGE_REFRESH, pageId };
 }
+
+export function setFilter(filter) {
+  return { type: types.SET_FILTER, filter, instrument: true };
+}

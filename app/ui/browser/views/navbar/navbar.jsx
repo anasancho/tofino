@@ -176,6 +176,27 @@ const NavBar = (props) => {
           disabled={!props.page.canRefresh} />
       </div>
       <Location { ...props } />
+      <select onChange={props.handleFilterChange}>
+          <option value="">none</option>
+          <option value="aden">aden</option>
+          <option value="reyes">reyes</option>
+          <option value="perpetua">perpetua</option>
+          <option value="inkwell">inkwell</option>
+          <option value="toaster">toaster</option>
+          <option value="walden">walden</option>
+          <option value="hudson">hudson</option>
+          <option value="gingham">gingham</option>
+          <option value="mayfair">mayfair</option>
+          <option value="lofi">lofi</option>
+          <option value="xpro2">xpro2</option>
+          <option value="_1977">1977</option>
+          <option value="brooklyn">brooklyn</option>
+          <option value="nashville">nashville</option>
+          <option value="lark">lark</option>
+          <option value="moon">moon</option>
+          <option value="clarendon">clarendon</option>
+          <option value="willow">willow</option>
+      </select>
       <div className={`${NAVBAR_SIDE_SECTIONS_STYLE} ${NAVBAR_SIDE_SECTION_RIGHT_STYLE}`}>
         <VerticalSeparator />
         <Btn id="browser-navbar-minimize"
